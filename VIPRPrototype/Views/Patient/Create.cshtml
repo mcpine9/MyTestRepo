@@ -1,0 +1,91 @@
+﻿@model VIPRPrototype.Models.Patient
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Patient</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FirstName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FirstName)
+            @Html.ValidationMessageFor(model => model.FirstName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LastName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LastName)
+            @Html.ValidationMessageFor(model => model.LastName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SSNum)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SSNum)
+            @Html.ValidationMessageFor(model => model.SSNum)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DOB)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DOB)
+            @Html.ValidationMessageFor(model => model.DOB)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Address.AddressLine1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Address.AddressLine1)
+            @Html.ValidationMessageFor(model => model.Address.AddressLine1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Address.AddressLine2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Address.AddressLine2)
+            @Html.ValidationMessageFor(model => model.Address.AddressLine2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Address.City)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Address.City)
+            @Html.ValidationMessageFor(model => model.Address.City)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Address.Zip)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Address.Zip)
+            @Html.ValidationMessageFor(model => model.Address.Zip)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

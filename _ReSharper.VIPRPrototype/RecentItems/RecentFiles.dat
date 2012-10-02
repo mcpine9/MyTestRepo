@@ -1,0 +1,41 @@
+﻿<RecentFiles>
+  <RecentFiles>
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:App_Start/f:AuthConfig.cs" caret="0" fromTop="0" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:App_Start/f:FilterConfig.cs" caret="0" fromTop="0" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:App_Start/f:RouteConfig.cs" caret="0" fromTop="0" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:App_Start/f:WebApiConfig.cs" caret="0" fromTop="0" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/f:Web.config" caret="1145" fromTop="12" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:Models/f:AccountModels.cs" caret="0" fromTop="0" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:Models/f:DataContext.cs" caret="0" fromTop="0" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:Models/f:Patient.cs" caret="182" fromTop="7" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:Controllers/f:PatientController.cs" caret="0" fromTop="0" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:Models/f:Address.cs" caret="362" fromTop="12" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:Models/f:Provider.cs" caret="0" fromTop="0" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:Models/f:Encounter.cs" caret="437" fromTop="14" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:Models/f:Chart.cs" caret="571" fromTop="18" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:Views/d:Patient/f:Index.cshtml" caret="0" fromTop="0" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:Views/f:_ViewStart.cshtml" caret="0" fromTop="0" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:Models/f:VIPRDataInitializer.cs" caret="391" fromTop="14" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:Controllers/f:ChartController.cs" caret="316" fromTop="15" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:Views/d:Chart/f:Index.cshtml" caret="0" fromTop="0" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:Controllers/f:InboxController.cs" caret="315" fromTop="15" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:Views/d:Search/f:Index.cshtml" caret="0" fromTop="0" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:Models/f:SearchCriteriaModel.cs" caret="88" fromTop="5" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:Views/d:Inbox/f:Index.cshtml" caret="0" fromTop="0" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:Controllers/f:SearchController.cs" caret="508" fromTop="25" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:css/f:shared.css" caret="11" fromTop="2" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:App_Start/f:BundleConfig.cs" caret="76" fromTop="3" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/f:Global.asax.cs" caret="977" fromTop="31" />
+  </RecentFiles>
+  <RecentEdits>
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:Controllers/f:PatientController.cs" caret="1319" fromTop="21" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:Models/f:Encounter.cs" caret="434" fromTop="14" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:Models/f:Address.cs" caret="295" fromTop="10" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:Models/f:Patient.cs" caret="182" fromTop="7" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:Models/f:Chart.cs" caret="503" fromTop="15" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:Models/f:SearchCriteriaModel.cs" caret="30" fromTop="0" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:Controllers/f:SearchController.cs" caret="284" fromTop="13" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/d:App_Start/f:BundleConfig.cs" caret="76" fromTop="3" />
+    <File id="BB7266B5-5FFE-4509-A94A-B46B2DE0E554/f:Global.asax.cs" caret="220" fromTop="8" />
+  </RecentEdits>
+</RecentFiles>
