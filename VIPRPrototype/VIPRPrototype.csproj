@@ -165,7 +165,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ChartController.cs" />
+    <Compile Include="Controllers\PatientChartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InboxController.cs" />
     <Compile Include="Controllers\PatientController.cs" />
@@ -260,7 +260,7 @@
     <Content Include="Views\Patient\Delete.cshtml" />
     <Content Include="Views\Patient\Details.cshtml" />
     <Content Include="Views\Patient\Edit.cshtml" />
-    <Content Include="Views\Chart\Index.cshtml" />
+    <Content Include="Views\PatientChart\Index.cshtml" />
     <Content Include="Views\Inbox\Index.cshtml" />
     <Content Include="Views\Search\Index.cshtml" />
   </ItemGroup>

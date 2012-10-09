@@ -1,2 +1,16 @@
 ﻿body {
 }
+
+/* Layout  */
+#EncounterContent
+{
+    width: 450px;
+    border-collapse: collapse;
+    border: 1px solid #898989;
+    font-family: verdana, Helvetica;
+    font-size: .5em;  
+}
+
+#EncounterContent td.content
+{
+}
