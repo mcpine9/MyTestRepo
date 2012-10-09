@@ -2,4 +2,22 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+@section PageCss
+{
+    <link href="~/css/Inbox.css" rel="stylesheet"/>
+}
+@section PageJs
+{
+    <script language="javascript" type="text/javascript">
+        $(function() {
+            $("#btnPatientSearch").click(function() {
+                window.location.href = "@Url.Content("/PatientSearch")";
+            });
+            $("#btnPatientChart").click(function () {
+                window.location.href = "@Url.Content("/PatientChart/Index/1")";
+            });
+        });
+    </script>
+}
+
+<h2>Inbox</h2>

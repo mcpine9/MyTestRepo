@@ -1,16 +1,96 @@
-﻿body {
+﻿body
+{
+    background: url("../Images/Shared/bg_blkchkrd.png");
+    color: white;
 }
 
 /* Layout  */
-#EncounterContent
+#LogIn
 {
-    width: 450px;
-    border-collapse: collapse;
-    border: 1px solid #898989;
-    font-family: verdana, Helvetica;
-    font-size: .5em;  
+    width: 100%;
+    height: 2em;
+    clear: both;
+}
+#FacilityInformation
+{
+    float: left;
+    width: 30%;
+}
+#FacilityInformation h1
+{
+    font-size: 1.5em;
+    font-family: Verdana, Helvetica;
+    font-weight: bold;
+    margin: .2em;
+}
+#LogInNavigation
+{
+    float: left;
+    text-align: right;
+    width: 70%;
+    margin: .8em 0 0 -.8em;
+}
+#LogInNavigation a
+{
+    color: #e98625;
+    text-decoration: none;
+    font-size: .9em;
+}
+#LogInNavigation a:hover
+{
+    color: #e98625;
+    text-decoration: underline;
+    font-size: .9em;
+}
+#MainSection
+{
+    width: 100%;
+    background-repeat: repeat-x;
+    background-image: url("../Images/Shared/bg_maintop_shdw.png");
+    background-color: #e0e0e0;
+    display: block;
+    margin: 1em 0 1em 0;
+    padding: 1em 0 1em 0;
+}
+#ContentWrapper
+{
+    min-height: 270px;
+}
+#LeftNav
+{
+    position: relative;
+    width: 115px;
+    float: left;
+    margin: 0 -12px 0 12px;
+    z-index: 11;
+}
+#LeftNavTabs
+{
+    display: block;
+    width: 105px;
+    height: 270px;
+    overflow: hidden;
+    background: url("../Images/Shared/btn_LeftNavTabs.png") no-repeat;
+}
+#LeftNavTabs div
+{
+    width: 105px;
+    height: 89px;
+    clear: left;
+    cursor: pointer;
+}
+#Content
+{
+    background-color: #f0f0f0;
+    border: 1px #bcbcbc solid;
+    min-height: 600px;
+    padding: 0 1em 1em 1em;
+    float: left;
+    z-index: 10;
+    color: black;
 }
 
-#EncounterContent td.content
+.clear
 {
+    clear: both;
 }

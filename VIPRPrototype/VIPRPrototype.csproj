@@ -169,7 +169,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InboxController.cs" />
     <Compile Include="Controllers\PatientController.cs" />
-    <Compile Include="Controllers\SearchController.cs" />
+    <Compile Include="Controllers\PatientSearchController.cs" />
     <Compile Include="Models\SearchCriteriaModel.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -190,7 +190,10 @@
     <Content Include="App_Data\VIPRPrototype.Models.DataContext_log.ldf">
       <DependentUpon>VIPRPrototype.Models.DataContext.mdf</DependentUpon>
     </Content>
+    <Content Include="css\Inbox.css" />
     <Content Include="css\normalize.css" />
+    <Content Include="css\PatientChart.css" />
+    <Content Include="css\PatientSearch.css" />
     <Content Include="css\shared.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -198,9 +201,22 @@
     <Content Include="Images\Chart\btn_add_to_msg.png" />
     <Content Include="Images\Chart\btn_pulldown.png" />
     <Content Include="Images\Chart\btn_pullup.png" />
-    <Content Include="Images\Shared\bg_greycheckered.png" />
-    <Content Include="Images\Shared\gfx_topshdw.png" />
-    <Content Include="Images\Shared\nav_lefttabs.png" />
+    <Content Include="Images\Shared\bg_blkchkrd.png" />
+    <Content Include="Images\Shared\bg_maintop_shdw.png" />
+    <Content Include="Images\Shared\bg_timeline.png" />
+    <Content Include="Images\Shared\bg_timeline_bottom.png" />
+    <Content Include="Images\Shared\bg_timeline_top.png" />
+    <Content Include="Images\Shared\btn_Add_to_SendList.png" />
+    <Content Include="Images\Shared\btn_Allergies.png" />
+    <Content Include="Images\Shared\btn_EncounterHistory.png" />
+    <Content Include="Images\Shared\btn_Immunizations.png" />
+    <Content Include="Images\Shared\btn_Labs.png" />
+    <Content Include="Images\Shared\btn_LeftNavTabs.png" />
+    <Content Include="Images\Shared\btn_Medications.png" />
+    <Content Include="Images\Shared\icon_arrwRt_blu.png" />
+    <Content Include="Images\Shared\icon_arrwRt_grey.png" />
+    <Content Include="Images\Shared\icon_attachment.png" />
+    <Content Include="Images\Shared\icon_milestone.png" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -262,7 +278,7 @@
     <Content Include="Views\Patient\Edit.cshtml" />
     <Content Include="Views\PatientChart\Index.cshtml" />
     <Content Include="Views\Inbox\Index.cshtml" />
-    <Content Include="Views\Search\Index.cshtml" />
+    <Content Include="Views\PatientSearch\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
