@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace VIPRPrototype.Models
 {
     public class Provider

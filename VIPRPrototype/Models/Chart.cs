@@ -13,7 +13,8 @@ namespace VIPRPrototype.Models
         public int PatientId { get; set; }
 
         public virtual ICollection<Encounter> Encounters { get; set; }
+
         [ForeignKey("PatientId")]
-        public virtual Patient CPatient { get; set; }
+        public virtual Patient Patient { get; set; }
     }
 }

@@ -23,8 +23,6 @@ namespace VIPRPrototype
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/ias").Include("~/Scripts/jquery.ias.js"));
-
             bundles.Add(new StyleBundle("~/css").Include(
                         "~/css/normalize.css",
                         "~/css/shared.css"));

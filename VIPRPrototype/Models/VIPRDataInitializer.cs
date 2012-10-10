@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Web;
 
 namespace VIPRPrototype.Models
 {
@@ -71,31 +69,6 @@ namespace VIPRPrototype.Models
                 }.ForEach(p => context.Patients.Add(p));
             context.SaveChanges();
 
-            new List<Chart>
-                {
-                    new Chart()
-                        {
-                            PatientId = 1,
-                            CreateOnDate = new DateTime(1999, 5, 20)
-                        },
-                    new Chart()
-                        {
-                            PatientId = 2,
-                            CreateOnDate = new DateTime(2005, 3, 1)
-                        },
-                    new Chart()
-                        {
-                            PatientId = 3,
-                            CreateOnDate = new DateTime(2006, 8, 1)
-                        },
-                    new Chart()
-                        {
-                            PatientId = 4,
-                            CreateOnDate = new DateTime(2001, 5, 5)
-                        },
-                }.ForEach(c => context.Charts.Add(c));
-            context.SaveChanges();
-
             new List<Provider>
                 {
                     new Provider()
@@ -131,121 +104,133 @@ namespace VIPRPrototype.Models
                 }.ForEach(p => context.Providers.Add(p));
             context.SaveChanges();
 
-            new List<Encounter>
+            new List<Chart>
                 {
-                    new Encounter()
+                    new Chart()
                         {
-                            ChartId = 1,
-                            ProviderId = 2,
-                            VisitTime = new DateTime(1999, 5, 20, 10, 0, 0),
-                            Title = "Nausia, Dizziness, Foot Pain",
-                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
+                            PatientId = 1,
+                            CreateOnDate = new DateTime(1999, 5, 20),
+                            Encounters = new List<Encounter>
+                                {
+                                    new Encounter()
+                                        {
+                                            ProviderId = 2,
+                                            VisitTime = new DateTime(1999, 5, 20, 10, 0, 0),
+                                            Title = "Nausia, Dizziness, Foot Pain",
+                                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
+                                        },
+                                    new Encounter()
+                                        {
+                                            ProviderId = 2,
+                                            VisitTime = new DateTime(2000, 1, 5, 13, 0, 0),
+                                            Title = "Foot Pain",
+                                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
+                                        },
+                                    new Encounter()
+                                        {
+                                            ProviderId = 5,
+                                            VisitTime = new DateTime(2000, 6, 25, 8, 0, 0),
+                                            Title = "Chest Pain",
+                                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
+                                        },
+                                    new Encounter()
+                                        {
+                                            ProviderId = 5,
+                                            VisitTime = new DateTime(2000, 6, 25, 9, 30, 0),
+                                            Title = "Chest X-Ray",
+                                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
+                                        },
+                                    new Encounter()
+                                        {
+                                            ProviderId = 2,
+                                            VisitTime = new DateTime(2000, 1, 5, 13, 0, 0),
+                                            Title = "Foot Pain",
+                                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
+                                        }
+                                }
+
                         },
-                    new Encounter()
+                    new Chart()
                         {
-                            ChartId = 1,
-                            ProviderId = 2,
-                            VisitTime = new DateTime(2000, 1, 5, 13, 0, 0),
-                            Title = "Foot Pain",
-                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
+                            PatientId = 2,
+                            CreateOnDate = new DateTime(2005, 3, 1),
+                            Encounters = new List<Encounter>
+                                {
+                                    new Encounter()
+                                        {
+                                            ProviderId = 5,
+                                            VisitTime = new DateTime(2000, 6, 25, 8, 0, 0),
+                                            Title = "Chest Pain",
+                                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
+                                        },
+                                    new Encounter()
+                                        {
+                                            ProviderId = 5,
+                                            VisitTime = new DateTime(2000, 6, 25, 9, 30, 0),
+                                            Title = "Chest X-Ray",
+                                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
+                                        },
+                                    new Encounter()
+                                        {
+                                            ProviderId = 2,
+                                            VisitTime = new DateTime(2000, 1, 5, 13, 0, 0),
+                                            Title = "Foot Pain",
+                                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
+                                        },
+                                    new Encounter()
+                                        {
+                                            ProviderId = 5,
+                                            VisitTime = new DateTime(2000, 6, 25, 8, 0, 0),
+                                            Title = "Chest Pain",
+                                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
+                                        },
+                                    new Encounter()
+                                        {
+                                            ProviderId = 5,
+                                            VisitTime = new DateTime(2000, 6, 25, 9, 30, 0),
+                                            Title = "Chest X-Ray",
+                                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
+                                        },
+                                    new Encounter()
+                                        {
+                                            ProviderId = 2,
+                                            VisitTime = new DateTime(2000, 1, 5, 13, 0, 0),
+                                            Title = "Foot Pain",
+                                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
+                                        }
+                                }
                         },
-                    new Encounter()
+                    new Chart()
                         {
-                            ChartId = 1,
-                            ProviderId = 5,
-                            VisitTime = new DateTime(2000, 6, 25, 8, 0, 0),
-                            Title = "Chest Pain",
-                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
-                        },
-                    new Encounter()
-                        {
-                            ChartId = 1,
-                            ProviderId = 5,
-                            VisitTime = new DateTime(2000, 6, 25, 9, 30, 0),
-                            Title = "Chest X-Ray",
-                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
-                        },
-                    new Encounter()
-                        {
-                            ChartId = 1,
-                            ProviderId = 2,
-                            VisitTime = new DateTime(2000, 1, 5, 13, 0, 0),
-                            Title = "Foot Pain",
-                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
-                        },
-                    new Encounter()
-                        {
-                            ChartId = 2,
-                            ProviderId = 5,
-                            VisitTime = new DateTime(2000, 6, 25, 8, 0, 0),
-                            Title = "Chest Pain",
-                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
-                        },
-                    new Encounter()
-                        {
-                            ChartId = 1,
-                            ProviderId = 5,
-                            VisitTime = new DateTime(2000, 6, 25, 9, 30, 0),
-                            Title = "Chest X-Ray",
-                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
-                        },
-                    new Encounter()
-                        {
-                            ChartId = 2,
-                            ProviderId = 2,
-                            VisitTime = new DateTime(2000, 1, 5, 13, 0, 0),
-                            Title = "Foot Pain",
-                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
-                        },
-                    new Encounter()
-                        {
-                            ChartId = 1,
-                            ProviderId = 5,
-                            VisitTime = new DateTime(2000, 6, 25, 8, 0, 0),
-                            Title = "Chest Pain",
-                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
-                        },
-                    new Encounter()
-                        {
-                            ChartId = 3,
-                            ProviderId = 5,
-                            VisitTime = new DateTime(2000, 6, 25, 9, 30, 0),
-                            Title = "Chest X-Ray",
-                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
-                        },
-                    new Encounter()
-                        {
-                            ChartId = 2,
-                            ProviderId = 2,
-                            VisitTime = new DateTime(2000, 1, 5, 13, 0, 0),
-                            Title = "Foot Pain",
-                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
-                        },
-                    new Encounter()
-                        {
-                            ChartId = 1,
-                            ProviderId = 5,
-                            VisitTime = new DateTime(2000, 6, 25, 8, 0, 0),
-                            Title = "Chest Pain",
-                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
-                        },
-                    new Encounter()
-                        {
-                            ChartId = 1,
-                            ProviderId = 5,
-                            VisitTime = new DateTime(2000, 6, 25, 9, 30, 0),
-                            Title = "Chest X-Ray",
-                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
-                        },
-                    new Encounter()
-                        {
-                            ChartId = 2,
-                            ProviderId = 5,
-                            VisitTime = new DateTime(2000, 6, 25, 9, 30, 0),
-                            Title = "Chest X-Ray",
-                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
+                            PatientId = 3,
+                            CreateOnDate = new DateTime(2006, 8, 1),
+                            Encounters = new List<Encounter>
+                                {
+                                    
+                                    new Encounter()
+                                        {
+                                            ProviderId = 5,
+                                            VisitTime = new DateTime(2000, 6, 25, 8, 0, 0),
+                                            Title = "Chest Pain",
+                                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
+                                        },
+                                    new Encounter()
+                                        {
+                                            ProviderId = 5,
+                                            VisitTime = new DateTime(2000, 6, 25, 9, 30, 0),
+                                            Title = "Chest X-Ray",
+                                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
+                                        },
+                                    new Encounter()
+                                        {
+                                            ProviderId = 5,
+                                            VisitTime = new DateTime(2000, 6, 25, 9, 30, 0),
+                                            Title = "Chest X-Ray",
+                                            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
+                                        }
+                                }
                         }
-                }.ForEach(e => context.Encounters.Add(e));
+                }.ForEach(c => context.Charts.Add(c));
             context.SaveChanges();
 
             base.Seed(context);

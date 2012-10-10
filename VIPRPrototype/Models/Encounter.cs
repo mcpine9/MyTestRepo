@@ -14,13 +14,8 @@ namespace VIPRPrototype.Models
         [DisplayFormat(DataFormatString = "{0:G}")]
         public DateTime VisitTime { get; set; }
         public int ProviderId { get; set; }
-        public int ChartId { get; set; }
 
-        [ForeignKey("ProviderId")]
         [DisplayName("Physician")]
-        public virtual Provider AttendingPhysician { get; set; }
-
-        [ForeignKey("ChartId")]
-        public virtual Chart Chart { get; set; }
+        public virtual Provider Provider { get; set; }
     }
 }
