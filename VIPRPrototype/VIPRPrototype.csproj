@@ -40,6 +40,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList">
+      <HintPath>..\packages\PagedList.1.15.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc">
+      <HintPath>..\packages\PagedList.Mvc.3.18.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -191,6 +197,7 @@
     <Content Include="App_Data\VIPRPrototype.Models.DataContext_log.ldf">
       <DependentUpon>VIPRPrototype.Models.DataContext.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\PagedList.css" />
     <Content Include="css\Inbox.css" />
     <Content Include="css\normalize.css" />
     <Content Include="css\PatientChart.css" />
@@ -214,6 +221,7 @@
     <Content Include="Images\Shared\btn_Labs.png" />
     <Content Include="Images\Shared\btn_LeftNavTabs.png" />
     <Content Include="Images\Shared\btn_Medications.png" />
+    <Content Include="Images\Shared\icon_ajax-loader.gif" />
     <Content Include="Images\Shared\icon_arrwRt_blu.png" />
     <Content Include="Images\Shared\icon_arrwRt_grey.png" />
     <Content Include="Images\Shared\icon_attachment.png" />
@@ -225,6 +233,10 @@
     <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
     <Content Include="Scripts\jquery.ba-resize.js" />
     <Content Include="Scripts\jquery.ba-resize.min.js" />
+    <Content Include="Scripts\jquery.ias.js" />
+    <Content Include="Scripts\jquery.ias.min.js" />
+    <Content Include="Scripts\jquery.masonry.js" />
+    <Content Include="Scripts\jquery.masonry.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
