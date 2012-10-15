@@ -226,6 +226,8 @@
     <Content Include="Images\Shared\icon_arrwRt_grey.png" />
     <Content Include="Images\Shared\icon_attachment.png" />
     <Content Include="Images\Shared\icon_milestone.png" />
+    <Content Include="Images\Shared\icon_milestone_left.png" />
+    <Content Include="Images\Shared\icon_milestone_right.png" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -237,6 +239,7 @@
     <Content Include="Scripts\jquery.ias.min.js" />
     <Content Include="Scripts\jquery.masonry.js" />
     <Content Include="Scripts\jquery.masonry.min.js" />
+    <Content Include="Scripts\jquery.stickyscroll.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />

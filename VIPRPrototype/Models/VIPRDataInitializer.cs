@@ -122,7 +122,7 @@ namespace VIPRPrototype.Models
                                     new Encounter()
                                         {
                                             ProviderId = 2,
-                                            VisitTime = new DateTime(2000, 1, 5, 13, 0, 0),
+                                            VisitTime = new DateTime(2000, 1, 5, 10, 0, 0),
                                             Title = "Foot Pain",
                                             Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nibh lorem. Suspendisse potenti. Pellentesque eu risus massa, eu vulputate metus. Cras eu consectetur nunc. Etiam gravida, diam a volutpat blandit, enim augue ullamcorper augue, ut pharetra elit eros sit amet leo. Curabitur fermentum, tellus in volutpat vehicula, est risus volutpat ipsum, vel cursus ante tellus ac ligula. Cras risus risus, fermentum ac convallis quis, mattis non urna. Mauris elit libero, vulputate in posuere sit amet, pellentesque sit amet lorem. Donec iaculis purus lacus, quis commodo nulla. Mauris semper rhoncus nisi, eu mattis neque mollis eu. Cras neque sem, lacinia vel lacinia in, malesuada a lorem. Nam molestie lobortis bibendum."
                                         },

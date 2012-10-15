@@ -11,7 +11,7 @@ namespace VIPRPrototype.Models
         public string Title { get; set; }
         public string Content { get; set; }
         [DisplayName("Visit Time")]
-        [DisplayFormat(DataFormatString = "{0:G}")]
+        [DisplayFormat(DataFormatString = "{0:f}")]
         public DateTime VisitTime { get; set; }
         public int ProviderId { get; set; }
 
